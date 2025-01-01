@@ -1,0 +1,44 @@
+لإنشاء صفحة ويب تتيح لك *التقاط تسجيل الصوت* عند دخول المستخدم إلى الصفحة باستخدام *HTML* و *JavaScript* و *PHP*، يجب أن نستخدم بعض الأدوات المتاحة في *HTML5* مثل *Web Audio API* أو *MediaRecorder API* لالتقاط الصوت من الميكروفون، بالإضافة إلى *PHP* لتخزين الصوت على الخادم إذا كنت بحاجة إلى ذلك.
+
+*الخطوات الأساسية*:
+1. *HTML* لعرض واجهة المستخدم.
+2. *JavaScript* لالتقاط الصوت باستخدام *MediaRecorder API*.
+3. *PHP* لحفظ الملف الصوتي على الخادم.
+
+*الشرح*:
+- *HTML*: لعرض واجهة المستخدم.
+- *JavaScript*: لاستخدام API لالتقاط الصوت من الميكروفون.
+- *PHP*: لحفظ الصوت الملتقط في *ملف صوتي* على الخادم.
+
+*الكود الكامل*:
+
+1. *HTML*: واجهة المستخدم
+
+```html
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الصوت</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #status {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>تسجيل الصوت</h1>
